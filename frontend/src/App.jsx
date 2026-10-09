@@ -20,8 +20,8 @@ const [erro, setErro] = useState('')
 
 useEffect( () =>{
    async function buscarUsers(){
-     const resposta = await axios.get('http://localhost:3000/usuarios')
-       
+    const resposta = await axios.get('https://cadastro-de-usuarios-api-7ukh.onrender.com/usuarios')     
+      
      setUsers(resposta.data) 
     }
 
@@ -38,7 +38,7 @@ useEffect( () =>{
   setErro('')
   
   try{
-    const resposta = await axios.post('http://localhost:3000/usuarios', {
+    const resposta = await axios.post('https://cadastro-de-usuarios-api-7ukh.onrender.com/usuarios', {
       nome: name,
       email: email,
       idade: age
@@ -54,7 +54,7 @@ useEffect( () =>{
  }
 async function deletarUser (id) {
   
-  await axios.delete(`http://localhost:3000/usuarios/${id}`)
+  await axios.delete(`https://cadastro-de-usuarios-api-7ukh.onrender.com/usuarios/${id}`)
 
   setUsers(usuariosAtuais =>
     usuariosAtuais.filter(user => user._id !== id)
@@ -63,7 +63,7 @@ async function deletarUser (id) {
 
 async function atualizarUser(id, dados) {
   const resposta = await axios.put(
-    `http://localhost:3000/usuarios/${id}`,
+    `https://cadastro-de-usuarios-api-7ukh.onrender.com/usuarios/${id}`,
     dados
   )
 
