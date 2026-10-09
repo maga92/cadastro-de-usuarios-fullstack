@@ -1,0 +1,52 @@
+.app{
+ max-width: 500px;
+ margin: 0 auto;
+ padding: 3rem 1rem;
+}
+
+.app h1{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color:rgb(255, 248, 234)
+}
+
+form {
+  display:flex;
+  flex-direction: column; /*deixa cada item do form, um abaixo do outro*/
+  background-color: rgb(255, 248, 234);
+  gap: 0.75rem;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+form input, form button{
+
+  padding: 0.8rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: 1px solid rgb(255, 248, 234);
+}
+
+form button{
+  background: linear-gradient(134deg, rgb(11, 43, 221), rgb(60, 173, 238));
+  color: rgb(255, 248, 234);
+  cursor: pointer;  
+}
+
+form button:hover{
+  opacity: 0.7;
+}
+
+.users,
+.user-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.app > form {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+/* O efeito de sombra estava pegando no editar. com a linha 50-51, não. */
