@@ -15,7 +15,8 @@ const Usuario = mongoose.model('Usuario', userSchema)
 
 
 const allowedOrigins = [
-  'http://localhost:5173'
+  'http://localhost:5173',
+  'https://cadastro-de-usuarios-1fpc.onrender.com'
 ]
 
 app.use(cors({
